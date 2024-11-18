@@ -1,0 +1,62 @@
+/* Container für das Portfolio */
+.portfolio-container {
+    max-width: 1000px; /* Begrenzte Breite des Containers, optional etwas kleiner machen */
+    margin: 0 auto; /* Zentriert den Inhalt */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Grid-Layout mit 3 Spalten */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Drei Spalten im Grid */
+    gap: 10px; /* Kleinerer Abstand zwischen den Kästchen */
+    justify-content: center; /* Zentriert die Grid-Elemente */
+    align-items: start; /* Stellt sicher, dass die Kästchen oben beginnen */
+  }
+  
+  /* Einzelne Portfolio-Kästchen */
+  .portfolio-item {
+    width: 240px; /* Feste Breite, optional kleiner */
+    height: 240px; /* Feste Höhe für quadratische Form */
+    background-color: #fff;
+    padding: 10px; /* Reduziertes Padding innerhalb der Kästchen */
+    border: 2px solid #ccc; /* Rahmen */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für optische Tiefe */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .portfolio-item:hover {
+    transform: scale(1.05); /* Vergrößerung beim Hover-Effekt */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Verstärkter Schatten beim Hover */
+  }
+  
+  .portfolio-item h3 {
+    margin: 0 0 5px; /* Kleinerer Abstand zwischen Titel und Text */
+  }
+  
+  .portfolio-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Responsive Design: Bei kleineren Bildschirmen */
+  @media (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr; /* Auf kleinen Bildschirmen nur eine Spalte */
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr); /* Auf mittleren Bildschirmen zwei Spalten */
+    }
+  }
+  

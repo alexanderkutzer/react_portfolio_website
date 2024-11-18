@@ -1,0 +1,64 @@
+/* App Container */
+.App {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Modernes, elegantes Styling für die Navbar */
+  .navigationbar {
+    background-color: rgba(255, 255, 255, 0.9); /* Heller, leicht transparenter Hintergrund */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sanfter Schatten für moderne Wirkung */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee
+    
+  }
+  
+  /* Styling der Buttons */
+  .navigationbar button {
+    background-color: #106bd3; /* Sanftes, beruhigendes Grün */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    margin: 0 10px;
+    border-radius: 25px; /* Runde Ecken für weiches, freundliches Design */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hover-Effekt für die Buttons */
+  .navigationbar button:hover {
+    background-color: #45a049; /* Dunkleres Grün bei Hover */
+    transform: translateY(-2px); /* Leichte Anhebung beim Hover */
+  }
+  
+  /* Fokus- und aktive Buttons */
+  .navigationbar button:focus,
+  .navigationbar button:active {
+    outline: none;
+    background-color: #106bd3;
+  }
+  
+  /* Mobiles Layout: Buttons werden vertikal angezeigt */
+  @media (max-width: 600px) {
+    .navigationbar {
+      flex-direction: column;
+      padding: 10px 0;
+    }
+    .navigationbar button {
+      margin: 10px 0;
+      width: 80%;
+    }
+  }
+  
